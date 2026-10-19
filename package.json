@@ -1,0 +1,17 @@
+{
+  "name": "beta-lens",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Beta Lens: scan a boulder problem and get AI beta for your grade.",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node --check js/app.js && node --check js/engine.js && node --check js/backend.js && node --check shared/prompt.js && for f in api/*.js api/_lib/*.js; do node --check $f || exit 1; done"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.135.0",
+    "@supabase/supabase-js": "^2.118.0",
+    "stripe": "^23.0.0"
+  },
+  "engines": { "node": ">=20" }
+}

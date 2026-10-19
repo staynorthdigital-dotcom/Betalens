@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "api/beta.js": { "maxDuration": 60 },
+    "api/ask.js": { "maxDuration": 60 }
+  },
+  "headers": [
+    { "source": "/sw.js", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+  ]
+}

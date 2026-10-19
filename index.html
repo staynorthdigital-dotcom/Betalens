@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beta Lens</title>
+<meta name="description" content="Scan a boulder problem, pick your colour and grade, and get the beta.">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Beta Lens">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<!--APP-->
+<div class="app-col">
+
+<section class="screen" id="splash" aria-label="Beta Lens">
+  <div class="glow"></div>
+  <svg viewBox="0 0 300 300" aria-hidden="true">
+    <g class="dotgrid" id="dotgrid"></g>
+    <circle class="hold-off" cx="60" cy="140" r="8"/><circle class="hold-off" cx="238" cy="210" r="10"/><circle class="hold-off" cx="250" cy="120" r="7"/><circle class="hold-off" cx="50" cy="60" r="9"/>
+    <polyline class="route-path" pathLength="1" points="82,252 150,234 110,190 192,160 130,120 206,84 150,44"/>
+    <circle class="hold" cx="82" cy="252" r="11" style="animation-delay:.35s"/>
+    <circle class="hold" cx="150" cy="234" r="9" style="animation-delay:.55s"/>
+    <circle class="hold" cx="110" cy="190" r="14" style="animation-delay:.75s"/>
+    <circle class="hold" cx="192" cy="160" r="12" style="animation-delay:.95s"/>
+    <circle class="hold" cx="130" cy="120" r="10" style="animation-delay:1.15s"/>
+    <circle class="hold" cx="206" cy="84" r="12" style="animation-delay:1.35s"/>
+    <circle class="hold" cx="150" cy="44" r="17" style="animation-delay:1.55s"/>
+    <g class="lens"><circle cx="150" cy="268" r="30"/><line x1="20" y1="268" x2="280" y2="268"/></g>
+  </svg>
+  <div class="splash-word wordmark"><span>Beta</span><span class="o">Lens</span></div>
+  <p class="splash-tag">Scan · Isolate · Send it</p>
+</section>
+
+<section class="screen" id="welcome" hidden aria-label="Welcome">
+  <div class="topbar"><span class="wordmark">Beta<span class="o">Lens</span></span><button class="btn ghost small" id="welcomeSkip" type="button">Skip</button></div>
+  <div class="slides" id="slides">
+    <div class="slide">
+      <div class="art"><svg class="float" viewBox="0 0 200 200" aria-hidden="true"><rect x="56" y="14" width="88" height="172" rx="18" fill="#fff" stroke="#0f1419" stroke-width="3.5"/><rect x="64" y="30" width="72" height="128" rx="6" fill="#b5aea2"/><g fill="var(--accent)"><circle cx="84" cy="138" r="7"/><circle cx="112" cy="116" r="8"/><circle cx="88" cy="88" r="7"/><circle cx="116" cy="58" r="9"/></g><circle cx="122" cy="142" r="5" fill="#2367c9"/><circle cx="76" cy="62" r="5" fill="#2e9e4a"/><circle cx="100" cy="171" r="7" fill="none" stroke="#0f1419" stroke-width="3"/></svg></div>
+      <p class="kicker">Step 1</p><h2>Snap the problem</h2><p>Stand back and take one photo with the whole boulder in frame, from the start holds to the top.</p>
+    </div>
+    <div class="slide">
+      <div class="art"><svg class="float" viewBox="0 0 200 200" aria-hidden="true"><g opacity=".25"><circle cx="50" cy="60" r="13" fill="#2367c9"/><circle cx="152" cy="82" r="11" fill="#2e9e4a"/><circle cx="66" cy="142" r="12" fill="#7a3fb5"/><circle cx="144" cy="152" r="13" fill="#e35d9c"/></g><g fill="#f2c21b"><circle cx="100" cy="40" r="14"/><circle cx="72" cy="96" r="12"/><circle cx="126" cy="118" r="13"/><circle cx="96" cy="168" r="11"/></g><g fill="none" stroke="#0f1419" stroke-width="2.5"><circle cx="100" cy="40" r="21"/><circle cx="72" cy="96" r="19"/><circle cx="126" cy="118" r="20"/><circle cx="96" cy="168" r="18"/></g></svg></div>
+      <p class="kicker">Step 2</p><h2>Pick your colour and grade</h2><p>Every other hold fades out, so the beta only uses your route. Set the V grade you're climbing.</p>
+    </div>
+    <div class="slide">
+      <div class="art"><svg class="float" viewBox="0 0 200 200" aria-hidden="true"><polyline points="70,165 120,140 80,100 130,70 100,35" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><g fill="var(--accent)"><circle cx="70" cy="165" r="10"/><circle cx="120" cy="140" r="10"/><circle cx="80" cy="100" r="10"/><circle cx="130" cy="70" r="10"/><circle cx="100" cy="35" r="13"/></g><g font-family="IBM Plex Mono,monospace" font-size="12" font-weight="600"><rect x="142" y="60" width="44" height="20" rx="5" fill="#0f1419"/><text x="149" y="74" fill="#fff">4 RH</text><rect x="16" y="90" width="44" height="20" rx="5" fill="#0f1419"/><text x="23" y="104" fill="#fff">3 LH</text></g></svg></div>
+      <p class="kicker">Step 3</p><h2>Get beta built for you</h2><p>AI draws a move-by-move sequence on your photo, shaped around your height, grade and style.</p>
+    </div>
+  </div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+  <button class="btn primary wide" id="welcomeNext" type="button">Next</button>
+</section>
+
+<section class="screen" id="auth" hidden aria-label="Sign in">
+  <div class="auth-hero">
+    <span class="wordmark">Beta<br><span class="o">Lens</span></span>
+    <p>Your pocket coach for every problem at the wall.</p>
+  </div>
+  <div class="card" id="authCard"></div>
+  <p class="fine" id="authFine"></p>
+</section>
+
+<section class="screen" id="setup" hidden aria-label="Set up your profile"></section>
+
+<section class="screen" id="app" hidden aria-label="Beta Lens">
+  <header class="appbar">
+    <span class="wordmark">Beta<span class="o">Lens</span></span>
+    <div style="display:flex;gap:10px;align-items:center"><span class="plan-pill" id="planPill"></span><button class="avatar" id="avatarBtn" type="button" aria-label="Your profile"></button></div>
+  </header>
+  <div class="demo-banner" id="demoBanner" hidden>Test mode: your data stays on this device.</div>
+
+  <div class="pane" id="pane-home"></div>
+
+  <div class="pane" id="pane-scan" hidden>
+    <div class="stage">
+      <div class="canvas-wrap"><canvas id="view" aria-label="Wall photo with your route colour highlighted"></canvas><div class="src-badge" id="srcBadge">Example wall</div><div class="scanline" id="scanline" hidden></div></div>
+      <div class="photo-actions">
+        <label class="btn primary" for="camIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Scan a climb</label>
+        <input class="vh" type="file" id="camIn" accept="image/*" capture="environment">
+        <label class="btn" for="libIn">Upload</label>
+        <input class="vh" type="file" id="libIn" accept="image/*">
+      </div>
+      <p class="hint">Tap a ringed hold to drop it if it isn't on your route.</p>
+    </div>
+    <div class="field"><div class="lbl-row"><span class="lbl" id="colLbl">Route colour</span><span class="count" id="holdCount"></span></div>
+      <div class="scroller" id="swatches" role="group" aria-labelledby="colLbl"></div></div>
+    <div class="field"><span class="lbl" id="gradeLbl">Grade</span><div class="scroller" id="grades" role="group" aria-labelledby="gradeLbl"></div></div>
+    <details class="more"><summary>More options</summary><div class="inner">
+      <div class="field"><label class="lbl" for="note">What's tripping you up?</label><textarea class="input" id="note" placeholder="e.g. I can't reach the crimp after the start"></textarea></div>
+      <label class="toggle" for="feetToggle"><span>Feet must stay on this colour</span><input type="checkbox" id="feetToggle"></label>
+      <div class="field"><label class="lbl" for="tol">Colour match</label><input type="range" id="tol" min="0" max="30" value="12"><div class="range-ends"><span>Stricter</span><span>Looser</span></div></div>
+    </div></details>
+    <button class="btn primary wide" id="askBtn" type="button">Read the beta</button>
+    <div class="status" id="status" aria-live="polite"></div>
+    <section class="card beta" id="beta" aria-live="polite" hidden></section>
+    <section class="card" id="followup" hidden>
+      <label class="lbl" for="q">Stuck on a move?</label>
+      <div class="ask-row"><input class="input" type="text" id="q" placeholder="How do I stop swinging on move 9?"><button class="btn dark" id="qBtn" type="button">Ask</button></div>
+      <p class="answer" id="answer" hidden></p>
+    </section>
+  </div>
+
+  <div class="pane" id="pane-climbs" hidden></div>
+  <div class="pane" id="pane-tips" hidden></div>
+  <div class="pane" id="pane-me" hidden></div>
+</section>
+
+<nav class="tabbar" id="tabbar" hidden aria-label="Main">
+  <div class="tabbar-in">
+    <button class="tab" data-tab="home" type="button"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>Home</button>
+    <button class="tab" data-tab="climbs" type="button"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="9" rx="2"/><rect x="13" y="4" width="7" height="6" rx="2"/><rect x="4" y="15" width="7" height="5" rx="2"/><rect x="13" y="12" width="7" height="8" rx="2"/></svg>Climbs</button>
+    <button class="tab fab" data-tab="scan" type="button" aria-label="Scan"><span class="ring"><svg viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="12" cy="12" r="3.5"/></svg></span></button>
+    <button class="tab" data-tab="tips" type="button"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>Coach</button>
+    <button class="tab" data-tab="me" type="button"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Me</button>
+  </div>
+</nav>
+</div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<!--/APP-->
+<script type="module" src="/js/app.js"></script>
+</body>
+</html>
